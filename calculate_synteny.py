@@ -26,8 +26,8 @@ def parse_tsv(tsv_file):
 		for chr, counts in count_dict.items():
 			syn_count += counts[0]
 			break_count += counts[1]
-			print(chr, counts[0], counts[1], round((counts[0]/(counts[0]+counts[1])*100), 2))
-		print("Total", syn_count, break_count, round((syn_count/(syn_count+break_count))*100, 2))
+			print("%s\t%s\t%s\t%s" % (chr, counts[0], counts[1], round((counts[0]/(counts[0]+counts[1])*100), 2)))
+		print("%s\t%s\t%s\t%s" % ("Total", syn_count, break_count, round((syn_count/(syn_count+break_count))*100, 2)))
 
 if __name__ == "__main__":
 	SCRIPT = "calculate_synteny"

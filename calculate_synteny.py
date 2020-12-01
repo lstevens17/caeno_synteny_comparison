@@ -3,7 +3,6 @@ import argparse
 
 def parse_tsv(tsv_file):
 	with open(tsv_file, 'r') as tsv:
-		#syn_count, break_count = 0, 0
 		count_dict = {}
 		prev_sp1chr = ''
 		for line in tsv:
